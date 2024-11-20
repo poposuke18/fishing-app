@@ -1,50 +1,103 @@
-# React + TypeScript + Vite
+# 🎣 Fishing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+釣りをもっと楽しく、もっと便利に。天候チェックから釣果記録まで、必要な情報をこのアプリ1つで管理できます。
 
-Currently, two official plugins are available:
+## 🌟 機能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **天候・潮汐情報連動**: 地域ごとの天候や潮の満ち引き情報をリアルタイムで表示
+- **釣りスポット情報**: 人気の釣り場所と最新の釣果情報を共有
+- **魚種図鑑**: 季節ごとの魚の特徴と釣り方ガイド
+- **釣果記録**: 釣果の記録と共有機能
+- **基礎知識**: 初心者から上級者まで役立つ情報を提供
 
-## Expanding the ESLint configuration
+## 🛠 技術スタック
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **フロントエンド**: React + TypeScript + Vite
+- **スタイリング**: Tailwind CSS
+- **UI部品**: 
+  - カスタムコンポーネント（Button, Card）
+  - アイコン: Lucide React
+- **状態管理**: React Hooks
+- **パフォーマンス最適化**: React.memo, useMemo, useCallback
+- **型安全性**: TypeScript strict mode
 
-- Configure the top-level `parserOptions` property like this:
+## 📁 現在のファイル構成
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+fishing-app/
+├── src/
+│   ├── components/
+│   │   └── ui/
+│   │       ├── button.tsx
+│   │       └── card.tsx
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── pages/
+│   │   └── Home.tsx
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── public/
+│   └── images/
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 開発開始方法
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+1. リポジトリのクローン:
+```bash
+git clone https://github.com/poposuke18/fishing-app.git
 ```
+
+2. 依存関係のインストール:
+```bash
+cd fishing-app
+npm install
+```
+
+3. 開発サーバーの起動:
+```bash
+npm run dev
+```
+
+4. ブラウザで以下のURLにアクセス:
+```
+http://localhost:5173
+```
+
+## 📱 実装済み機能
+
+### ホーム画面
+- モダンなヒーローセクション
+- 機能紹介カード
+- レスポンシブデザイン
+- インタラクティブなボタン
+
+## 🛠 今後の実装予定
+
+- [ ] ナビゲーションバーの追加
+- [ ] 天候・潮汐情報ページ
+- [ ] 釣りスポットマップ
+- [ ] 釣果記録機能
+- [ ] ユーザー認証
+- [ ] データベース連携
+
+## 🤝 コントリビューション
+
+プルリクエストは大歓迎です。大きな変更の場合は、まずissueを開いて変更内容を議論しましょう。
+
+## 📝 ライセンス
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## 👥 開発チーム
+
+- Frontend Developer: @poposuke18
+
+## 📞 サポート
+
+問題や提案がある場合は、GitHubのissueを開いてください。
