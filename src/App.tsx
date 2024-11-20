@@ -1,6 +1,4 @@
 // src/App.tsx
-import React from 'react'
-
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-ocean-100 to-ocean-300">
